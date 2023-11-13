@@ -1,17 +1,22 @@
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './components/Home'
-import About from './components/About'
-import Vans from './components/Vans'
+import Home from './pages/Home';
+import Connect from './pages/Connect';
+import Inscription from './pages/Inscription';
+import './App.css'
 export default function App() {
+
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/about' element={<About/>}/>
-        <Route path='/vans' element={<Vans/>} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/connect' element={<Connect/>} />
+          <Route path='/inscription' element={<Inscription/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

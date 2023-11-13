@@ -1,150 +1,135 @@
-nav {
-  padding: 16px;
-  background-color: antiquewhite;
-  box-shadow: 0 2px 0 0 rgb(199, 182, 182);
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
 }
 
-main {
-  background-image: url("../public/home-hero.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 573.07px;
-  top: 480.14px;
-  left: 327.21px;
-}
 .title {
-  width: 494.33px;
-  height: 84px;
-  top: 177.4px;
-  left: 26.91px;
-}
-.title h1 {
-  font-family: Inter;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 42px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #ffffff;
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
 }
 
-p {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #ffffff;
-  width: 494.33px;
-  height: 48px;
-  top: 284.04px;
-  left: 26.91px;
+/* .title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
 }
-button {
-  background: #ff8c38;
-  width: 494.33px;
-  height: 49.83px;
-  top: 383.7px;
-  left: 26.91px;
-  border-radius: 5px;
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0em;
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+} */
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
   text-align: center;
-  color: #ffffff;
-  border: none;
 }
 
-.hero {
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 100px;
+  width: 100%;
+  gap: 6px;
 }
 
-.about {
-  background-image: url("../public/about-hero.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 573.07px;
-  top: 480.14px;
-  left: 327.21px;
+.form label {
+  position: relative;
 }
 
-.about-title {
-  width: 494.33px;
-  height: 76px;
-  top: 393.67px;
-  left: 26.91px;
-  font-family: Inter;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 38px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-.about-p {
-  height: 154px;
-  top: 501px;
-  left: 27.02px;
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #161616;
-  padding-left: 50px;
-}
-
-.about-center {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.about-card {
-  width: 494px;
-  height: 198px;
-  top: 710px;
-  left: 27.02px;
-  width: 494px;
-  height: 198px;
-  top: 710px;
-  left: 27.02px;
-  border-radius: 5px;
-  background-color: #FFCC8D;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.about-card h1 {
-  font-family: Inter;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-.about-btn {
-  width: 174px;
-  height: 49px;
-  top: 827px;
-  left: 65.02px;
-  padding: 12px, 22px, 13px, 22px;
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
   border-radius: 10px;
-  font-family: Inter;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+/* .form label .input:valid + span {
+  color: black ;
+} */
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
   font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  background: #161616;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }

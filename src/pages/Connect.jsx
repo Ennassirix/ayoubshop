@@ -16,8 +16,9 @@ function BasicExample() {
     }, [])
     const handelSubmit = e => {
         e.preventDefault()
-        email === userInfo.email && password === userInfo.password ? navigate('/') : setError('email or password Incorrect')
+        email === userInfo[0].email && password === userInfo[0].password ? navigate('/profile') : setError('email or password Incorrect')
     }
+
     return (
         <>
             <NavBar />
@@ -26,21 +27,21 @@ function BasicExample() {
                     {
                         error.startsWith('email') && <Alert variant="danger">{error}</Alert>
                     }
-                    <p class="form-title">Sign in to your account</p>
-                    <div class="input-container">
+                    <p className="form-title">Sign in to your account</p>
+                    <div className="input-container">
                         <input type="email" placeholder="email@email.com" required
                             onChange={e => setEmail(e.target.value)}
                         />
                         <span>
                         </span>
                     </div>
-                    <div class="input-container">
+                    <div className="input-container">
                         <input type="password" placeholder="1234" required
                             onChange={e => setPassword(e.target.value)}
 
                         />
                     </div>
-                    <button type="submit" class="submit">
+                    <button type="submit" className="submit">
                         Sign in
                     </button>
 

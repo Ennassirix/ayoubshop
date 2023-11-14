@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import { Col, Badge } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
+
 function Product({ title, description, price, rating, stock, brand, category, thumbnail, id }) {
     return (
         <Col className='mb-3' key={id}>
@@ -25,15 +27,17 @@ function Product({ title, description, price, rating, stock, brand, category, th
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>See More...</Accordion.Header>
                                 <Accordion.Body>
-                                    <small className='text-danger'>{category }</small><br />
+                                    <small className='text-danger'>{category}</small><br />
                                     {description}
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
                     </Card.Text>
                     <span className='d-flex justify-content-between'>
-                        <Button variant="primary"><AddShoppingCartIcon/></Button>
-                    <Badge pill className='bg-light text-dark'>{stock}</Badge>
+                        <Button variant="primary"
+                            
+                        ><AddShoppingCartIcon /></Button>
+                        <Badge pill className='bg-light text-dark'>{stock}</Badge>
                     </span>
                 </Card.Body>
             </Card>
